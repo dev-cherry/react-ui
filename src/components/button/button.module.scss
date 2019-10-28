@@ -1,0 +1,18 @@
+.ui__button{
+  &--normal{
+    height: 30px;
+    padding: 0 20px;
+    background: #fff;
+    color: rgba(0,0,0,0.65);
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+  }
+  &--primary{
+    height: 30px;
+    padding: 0 20px;
+    background: #1890ff;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #1890ff;
+  }
+}

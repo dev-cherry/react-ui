@@ -1,0 +1,36 @@
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.2);
+}
+.modalBox{
+  position: relative;
+  width: 438px;
+  background: #fff;
+  padding: 70px 48px 54px;
+  border-radius: 28px;
+  line-height: 1.5;
+}
+.modalHeader{
+  text-align: right;
+}
+.handle{
+  display: flex;
+  margin-top: 70px;
+}
+.cancel, .confirm{
+  font-size: 20px;
+  width: 206px;
+  height: 74px;
+  border-radius: 42px;
+}
+.confirm{
+  margin-right: 28px;
+}

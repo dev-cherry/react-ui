@@ -1,46 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { confirm } from '@/components/confirm/Confirm';
 
-let loading = (Com) => {
-  class LoadingComponent extends Com{
-    constructor(props) {
-      super(props);
-      this.state = {
-        loading: false
-      }
+class App1 extends Component {
+  async componentDidMount() {
+    let res = await confirm('确定删除吗');
+    if (res) {
+      console.log("是")
+    } else {
+      console.log("否")
     }
-    showLoading() {
-      this.setState({
-        loading: true
-      })
-    }
-    hideLoading() {
-      this.setState({
-        loading: false
-      })
-    }
-    render() {
-      return (
-        <div>
-          {super.render()}
-          {this.state.loading && <div>loading</div>}
-        </div>
-      )
-    }
-  }
-  return LoadingComponent;
-}
-
-
-@loading
-class App extends React.Component{
-  componentDidMount() {
-    this.showLoading();
   }
   render() {
     return (
-      <div>app</div>
-    )
+      <div>
+
+      </div>
+    );
   }
 }
 
-export default App;
+App1.propTypes = {
+
+};
+
+export default App1;

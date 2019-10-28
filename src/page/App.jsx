@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
-  InputNumber
+  InputNumber,
+  Modal
 } from '@/components';
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
 
   return (
     <div>
-      <InputNumber value={value} onChange={e => {}} /><br/>
-      <InputNumber defaultValue={value} onChange={e => {}} />
+      <InputNumber value={value} onChange={e => { }} /><br />
+      <InputNumber defaultValue={value} onChange={e => { }} />
+      <Modal></Modal>
     </div>
   )
 }

@@ -1,37 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component{
-  state = {
-      num: 1
+let loading = (Com) => {
+  class LoadingComponent extends Com{
+    constructor(props) {
+      super(props);
+      this.state = {
+        loading: false
+      }
+    }
+    showLoading() {
+      this.setState({
+        loading: true
+      })
+    }
+    hideLoading() {
+      this.setState({
+        loading: false
+      })
+    }
+    render() {
+      return (
+        <div>
+          {super.render()}
+          {this.state.loading && <div>loading</div>}
+        </div>
+      )
+    }
+  }
+  return LoadingComponent;
+}
+
+
+@loading
+class App extends React.Component{
+  componentDidMount() {
+    this.showLoading();
   }
   render() {
-      return (
-          <div>
-              sss
-          </div>
-      );
-  }
-  componentDidUpdate(prevProps, prevState) {
-      console.log(this.state.num)
-  }
-  componentDidMount() {
-      setTimeout(() => {
-          console.log('timeout')
-      })
-      new Promise((resovle) => {
-          console.log('before')
-          resovle('then')
-          console.log('after')
-      }).then(res => {
-          console.log(res)
-      })
-      let {num} = this.state
-      this.setState({
-          num: ++num
-      }, () => {
-          console.log('after setState')
-      })
-      console.log('---')
+    return (
+      <div>app</div>
+    )
   }
 }
 

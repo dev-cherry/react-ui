@@ -9,6 +9,7 @@ class InputNumber extends Component {
     };
     this.onChange = this.onChange.bind(this);
   }
+  // 根据props中是否有value属性，来判断是否为受控组件
   get isControl() {
     return 'value' in this.props;
   }

@@ -3,12 +3,12 @@
  * @Author: zhongyuanrui
  * @Date: 2019-10-21 17:44:37
  * @LastEditors: zhongyuanrui
- * @LastEditTime: 2019-10-27 13:29:55
+ * @LastEditTime: 2019-11-02 10:23:51
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/style/index.scss';
-import App from './page/App1.jsx';
+import App from './page/App6.jsx';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
